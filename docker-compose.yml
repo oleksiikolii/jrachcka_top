@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  celery:
+    image: celery:latest
+    container_name: celery
+    command: celery -A jrachka_top worker --loglevel=info
+    volumes:
+      - ./jrachka_top:/app  # Mount your Django project code
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"

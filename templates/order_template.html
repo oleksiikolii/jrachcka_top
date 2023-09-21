@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Order Check</title>
+</head>
+<body>
+    <ul>
+        {% for item in order %}
+            <li>Dish: {{ item }}, Quantity: {{ item.value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
