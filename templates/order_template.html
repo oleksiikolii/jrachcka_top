@@ -3,9 +3,10 @@
     <title>Order Check</title>
 </head>
 <body>
+<h1>Order Number {{ order_no }}</h1>
     <ul>
-        {% for item in order %}
-            <li>Dish: {{ item }}, Quantity: {{ item.value }}</li>
+        {% for item, quantity in data.items %}
+            <li>Dish: {{ item }}, Quantity: {{ quantity }}</li>
         {% endfor %}
     </ul>
 </body>

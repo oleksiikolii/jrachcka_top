@@ -4,9 +4,9 @@ services:
   celery:
     image: celery:latest
     container_name: celery
-    command: celery -A jrachka_top worker --loglevel=info
+    command: celery -A service worker --loglevel=info
     volumes:
-      - ./jrachka_top:/app  # Mount your Django project code
+      - ./service:/app  # Mount your Django project code
     depends_on:
       - redis
 

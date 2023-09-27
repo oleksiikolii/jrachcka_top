@@ -3,7 +3,7 @@ import os
 from celery import Celery
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "jrachka_top.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "service.settings")
 
 app = Celery("django_celery")
 

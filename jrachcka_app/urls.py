@@ -8,7 +8,7 @@ router = routers.DefaultRouter()
 router.register("printers", PrinterViewSet)
 
 urlpatterns = (
-    path("bronx/", OrderCheckCreate.as_view()),
+    path("order/", OrderCheckCreate.as_view()),
 )# + router.urls
 
 app_name = "jrachka_app"
